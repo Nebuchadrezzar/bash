@@ -15,8 +15,13 @@ shopt -o noclobber
 iatest=$(expr index "$-" i)
 if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi
 
-# Show auto-completion list automatically, without double tab
-if [[ $iatest > 0 ]]; then bind "set show-all-if-ambiguous On"; fi
+# Show auto-completion list automatically without double tab, cycle through options
+if [[ $iatest > 0 ]]; then 
+        bind '"TAB":menu-complete'
+        bind "set show-all-if-ambiguous on"
+        bind "set completion-ignore-case on"
+        bind "set menu-complete-display-prefix on"
+fi
 
 # correct minor spelling mistakes in cd commands
 shopt -s cdspell
