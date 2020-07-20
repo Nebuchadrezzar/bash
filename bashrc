@@ -12,6 +12,7 @@ shopt -o noclobber
 
 # Ignore case on auto-completion
 # Note: bind used instead of sticking these in .inputrc
+iatest=$(expr index "$-" i)
 if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi
 
 # Show auto-completion list automatically, without double tab
