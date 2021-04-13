@@ -38,6 +38,16 @@ if [ -f "$HOME/.dircolors" ] ; then
         eval $(dircolors -b $HOME/.dircolors)
 fi
 
+# Enable bash programmable completion features in interactive shells
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
+# search through history with up/down arrows
+bind '"\e[A": history-search-backward' 2>/dev/null
+bind '"\e[B": history-search-forward' 2>/dev/null
 
 # ignore commands starting with a space and duplicates from being added to history 
 HISTCONTROL=ignoreboth
