@@ -92,16 +92,17 @@ alias .....='cd ../../../..'
 alias h='history | grep '
 alias q='exit'
 alias c='clear'
-alias h=’history’
+
 alias la='ls -a'
 alias ll='ls -l'
 
 alias mkdir='mkdir -p'
 alias ps='ps auxf'
-alias ping='ping -c 10'
-alias less='less -R'
+alias ping='ping -c 5'
 alias sha1='openssl sha1'
 
+# 'e' for edit, 's' for source; 
+# so 'ev' implies 'edit vim'. 
 alias ev='vim ~/.vimrc'
 alias eb='vim ~/.bashrc'
 alias sb='source ~/.bashrc'
