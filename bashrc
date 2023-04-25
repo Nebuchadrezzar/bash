@@ -50,7 +50,7 @@ bind '"\e[A": history-search-backward' 2>/dev/null
 bind '"\e[B": history-search-forward' 2>/dev/null
 
 # ignore commands starting with a space and duplicates from being added to history 
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 # append to the history file when shell is exited 
 shopt -s histappend
 # set size of history 
