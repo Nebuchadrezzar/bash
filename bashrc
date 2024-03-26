@@ -68,7 +68,8 @@ PROMPT_COMMAND='history -a'
 shopt -s histverify
 
 # color in grep
-export GREP_OPTIONS=' — color=auto'
+# GREP_OPTIONS is deprecated
+# export GREP_OPTIONS=' — color=auto'
 
 # set vim as the default editor
 export EDITOR=vim
